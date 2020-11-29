@@ -159,7 +159,6 @@
 // car.changeYear(2020);
 
 
-// ==============================================
 // - Створити функцію конструктор яка дозволяє створювати об'єкти car,
 // з властивостями модель, виробник, рік випуску,
 // максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
@@ -173,6 +172,45 @@
 //    з довільним набором полів, і доавляет його в поточний об'єкт car
 // ==============================================
 //
+// function car (model,
+//               manufakturer,
+//               maxSpeed,
+//               year,
+//               engineCapacity) {
+//     this.model = model || 'X6';
+//     this.manufakturer = manufakturer || 'BMW';
+//     this.maxSpeed = maxSpeed || 260;
+//     this.year = year || 2019;
+//     this.engineCapacity = engineCapacity || '4,395';
+//     this.drive = function () {
+//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+//     };
+//     this.info = function () {
+//         console.log(`
+//             model: ${this.model}
+//             manufakturer: ${this.manufakturer}
+//             maxSpeed: ${this.maxSpeed}
+//             year: ${this.year}
+//             engineСapacity: ${this.engineCapacity}
+//         `);
+//     };
+//     this.increaseMaxSpeed = function (newSpeed) {
+//         this.maxSpeed += newSpeed;
+//     };
+//     this.changeYear = function (newValue) {
+//         this.year = newValue
+//     };
+// }
+//
+// let car1 = new car ('Q7', 'Audi', 300, 2021, 5.5,);
+//
+// car.drive();
+// car.info();
+// car.increaseMaxSpeed(50);
+// car.changeYear(2020);
+
+
+
 // ==============================================
 //     - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
