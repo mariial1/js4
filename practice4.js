@@ -324,9 +324,48 @@
 // princ.findCinderell(arrayCinderella);
 
 
-// ==============================================
-//     -створити функцію конструктор попелюшка з полями ім'я, вік, розмір ноги
+// -створити функцію конструктор попелюшка
+// з полями ім'я, вік, розмір ноги
 // --Створити 10 попелюшок , покласти їх в масив
 // --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
 // -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
 // ==============================================
+//
+// function Cinderella (name, age, footSize) {
+//         this.footSize = footSize || 'No FootSize';
+//         this.name = name || 'No name';
+//         this.age = age || 'No age';
+// }
+//
+// function Princ (name, age, shoesSize) {
+//         this.shoesSize = shoesSize || 'No shoesSize';
+//         this.name = name || 'No name';
+//         this.age = age || 'No age';
+//
+//     this.findCinderell = function (array){
+//         let find = null;
+//         find = array.find(item => item.footSize === this.shoesSize);
+//
+//         find
+//             ?console.log('My cinderella name ' + find.name)
+//             :console.log('I not find my cinderell')
+//         }
+// }
+// let cinderella1 = new Cinderella('Adel', 16, 35);
+// let cinderella2 = new Cinderella('Asol', 15, 34);
+// let cinderella3 = new Cinderella('Eva', 17, 37);
+// let cinderella4 = new Cinderella('Mari', 25, 39);
+// let cinderella5 = new Cinderella('Inga', 35, 41);
+// let cinderella6 = new Cinderella('Olga', 15, 36);
+// let cinderella7 = new Cinderella('Ket', 17, 38);
+// let cinderella8 = new Cinderella('Bet', 19, 40);
+// let cinderella9 = new Cinderella('Sonya', 16, 36);
+// let cinderella10 = new Cinderella('Marta', 18, 37);
+//
+// let arrayCinderella = [cinderella1, cinderella2, cinderella3, cinderella4, cinderella5, cinderella6, cinderella7, cinderella8, cinderella9, cinderella10]
+//
+// console.log(arrayCinderella);
+//
+// const princ = new Princ('Artur', 21, 34);
+//
+// princ.findCinderell(arrayCinderella);
