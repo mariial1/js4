@@ -204,23 +204,65 @@
 //
 // let car1 = new car ('Q7', 'Audi', 300, 2021, 5.5,);
 //
-// car.drive();
-// car.info();
-// car.increaseMaxSpeed(50);
-// car.changeYear(2020);
+// car1.drive();
+// car1.info();
+// car1.increaseMaxSpeed(50);
+// car1.changeYear(2020);
 
 
-
-// ==============================================
-//     - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
-// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+//  - Створити клас який дозволяє створювати об'єкти car,
+//  з властивостями модель, виробник, рік випуску,
+//  максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль "їдемо зі швидкістю
+// {максимальна швидкість} на годину"
 // -- info () - яка виводить всю інформацію про автомобіль
-// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення
+// максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
-// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// -- addDriver (driver) - приймає об'єкт який "водій"
+// з довільним набором полів, і доавляет його в поточний об'єкт car
 // ==============================================
 //
+// class car {
+//     constructor(
+//         model,
+//         manufakturer,
+//         maxSpeed,
+//         year,
+//         engineCapacity) {
+//     this.model = model || 'X6';
+//     this.manufakturer = manufakturer || 'BMW';
+//     this.maxSpeed = maxSpeed || 260;
+//     this.year = year || 2019;
+//     this.engineCapacity = engineCapacity || '4,395';
+// }
+//     drive () {
+//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+//     };
+//     info () {
+//         console.log(`
+//             model: ${this.model}
+//             manufakturer: ${this.manufakturer}
+//             maxSpeed: ${this.maxSpeed}
+//             year: ${this.year}
+//             engineСapacity: ${this.engineCapacity}
+//         `);
+//     };
+//     increaseMaxSpeed (newSpeed) {
+//         this.maxSpeed += newSpeed;
+//     };
+//     changeYear (newValue) {
+//         this.year = newValue
+//     };
+// }
 //
+// let car1 = new car ('Q7', 'Audi', 290, 2021, 5.5,);
+//
+// car1.drive();
+// car1.info();
+// car1.increaseMaxSpeed(50);
+// car1.changeYear(2020);
+
 // ==============================================
 //     -створити класс попелюшка з полями ім'я, вік, розмір ноги
 // --Створити 10 попелюшок , покласти їх в масив
