@@ -263,15 +263,67 @@
 // car1.increaseMaxSpeed(50);
 // car1.changeYear(2020);
 
-// ==============================================
-//     -створити класс попелюшка з полями ім'я, вік, розмір ноги
+
+// -створити класс попелюшка з полями ім'я, вік, розмір ноги
 // --Створити 10 попелюшок , покласти їх в масив
-// --Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+// --Сторити об'єкт класу "принц" за допомоги класу
+// який має поля ім'я, вік, туфелька яку він знайшов.
 // -- за допоиоги циклу знайти яка попелюшка повинна бути з принцом
 // ==============================================
 //
+// class Human {
+//     constructor(name, age) {
+//         this.name = name || 'No Name';
+//         this.age = age || 'No age';
+//     }
+// }
 //
+// class Cinderella extends Human{
+//     constructor(name, age, footSize) {
+//         super(name, age);
+//         this.footSize = footSize || 'No footSize'
+//     }
+// }
 //
+// class Princ extends Human{
+//     constructor(name, age,shoesSize) {
+//         super(name, age);
+//         this.shoesSize = shoesSize || 'No shoesSize'
+//     }
+//     findCinderell(array){
+//         let find = null;
+//         for (const item of array) {
+//             if (item.footSize === this.shoesSize){
+//                 find = item;
+//             }
+//         }
+//         if(find){
+//             console.log('My cinderella name ' + find.name);
+//         }else{
+//             console.log('I not find my cinderell')
+//         }
+//     }
+// }
+// let cinderella1 = new Cinderella('Adel', 16, 35);
+// let cinderella2 = new Cinderella('Asol', 15, 34);
+// let cinderella3 = new Cinderella('Eva', 17, 37);
+// let cinderella4 = new Cinderella('Mari', 25, 39);
+// let cinderella5 = new Cinderella('Inga', 35, 41);
+// let cinderella6 = new Cinderella('Olga', 15, 36);
+// let cinderella7 = new Cinderella('Ket', 17, 38);
+// let cinderella8 = new Cinderella('Bet', 19, 40);
+// let cinderella9 = new Cinderella('Sonya', 16, 36);
+// let cinderella10 = new Cinderella('Marta', 18, 37);
+//
+// let arrayCinderella = [cinderella1, cinderella2, cinderella3, cinderella4, cinderella5, cinderella6, cinderella7, cinderella8, cinderella9, cinderella10]
+//
+// console.log(arrayCinderella);
+//
+// const princ = new Princ('Artur', 21, 36);
+//
+// princ.findCinderell(arrayCinderella);
+
+
 // ==============================================
 //     -створити функцію конструктор попелюшка з полями ім'я, вік, розмір ноги
 // --Створити 10 попелюшок , покласти їх в масив
