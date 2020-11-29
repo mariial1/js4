@@ -9,33 +9,6 @@
 // -опис дії атрибуту
 // інформацію брати з htmlbook.ru
 //
-// function TagObject (name, youActions, arrayAttr){
-// this.name = name;
-// this.youActions = youActions;
-// this.arrayAttr = arrayAttr;
-// this.ride = function () {
-//     let str = this.arrayAttr.map(value => {
-//         return `${value.name} ==== ${value.action}`
-//     })
-//     console.log(str);
-//     console.log('I know teg '+
-//         this.name+ ' it '+
-//         this.youActions +' and it is attributes '
-//         +str+ '.')
-// }
-// }
-// function Attr (name, youActions){
-// this.name = name;
-// this.action = youActions;
-// };
-// let arg1 =[ new Attr('style','hhfdskjfkfjdhjfk'),
-//             new Attr('style','hhfdskjfkfjdhjfk'),
-//             new Attr('style','hhfdskjfkfjdhjfk'),
-//             new Attr('style','hhfdskjfkfjdhjfk')
-//         ]
-// let head = new TagObject('head', 'heading', arg1);
-// head.ride();
-
 // Таким чином описати теги
 // -a
 // -div
@@ -57,11 +30,37 @@
 // ]
 //
 // }
-// ==============================================
+// ============
 //
-//
-// ==============================================
-//     -  Створити класс  для об'єкту який описує теги
+// function TagObject (name, youActions, arrayAttr){
+// this.name = name;
+// this.youActions = youActions;
+// this.arrayAttr = arrayAttr;
+// this.ride = function () {
+//     let str = this.arrayAttr.map(value => {
+//         return `${value.name} ==== ${value.action}`
+//     })
+//     console.log(str);
+//     console.log('I know teg '+
+//         this.name+ ' it '+
+//         this.youActions +' and it is attributes '
+//         +str+ '.')
+// }
+// }
+// function Attr (name, youActions){
+// this.name = name;
+// this.action = youActions;
+// };
+// let arg1 =[ new Attr('style','применяется для определения стилей элементов веб-страницы'),
+//             new Attr('title','oпределяет заголовок документа'),
+//             new Attr('script','предназначен для описания скриптов, может содержать ссылку на программу или ее текст на определенном языке'),
+//             new Attr('meta','определяет метатеги, которые используются для хранения информации предназначенной для браузеров и поисковых систем')
+//         ]
+// let head = new TagObject('head', 'heading', arg1);
+// head.ride();
+
+
+// -  Створити класс  для об'єкту який описує теги
 // Властивості
 // -назва тегу
 // - опис його дій
@@ -94,25 +93,84 @@
 // }
 // ==============================================
 //
+// class TagObject {
+//     constructor(name, action, Attr) {
+//         this.name = name;
+//         this.action = action;
+//         this.Attr = Attr;
+//     }
+// }
 //
-//
-// ==============================================
-//     - Створити об'єкт car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
-// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// let name = '<meta>';
+// let action = 'Тег <meta> определяет метатеги, которые используются для хранения информации предназначенной для браузеров и поисковых систем.';
+// let Attr = [
+//     {nameOfAttr: 'charset', actionOfAttr: 'Задает кодировку документа'},
+//     {nameOfAttr: 'content', actionOfAttr: 'Устанавливает значение атрибута, заданного с помощью name или http-equiv'},
+//     {nameOfAttr: 'http-equiv', actionOfAttr: 'Предназначен для конвертирования метатега в заголовок HTTP'}
+// ];
+// let obj = new TagObject(name,action,Attr);
+// console.log(obj);
+
+
+// - Створити об'єкт car, з властивостями модель, виробник,
+// рік випуску, максимальна швидкість, об'єм двигуна.
+// додати в об'єкт функції:
+// -- drive () - яка виводить в консоль "їдемо зі швидкістю
+//    {максимальна швидкість} на годину"
 // -- info () - яка виводить всю інформацію про автомобіль
-// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення
+//     максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
-// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// -- addDriver (driver) - приймає об'єкт який "водій"
+//    з довільним набором полів, і доавляет його в поточний об'єкт car
 // ==============================================
 //
+// let car = {
+//     model: 'X6',
+//     manufakturer: 'BMW',
+//     maxSpeed: 260,
+//     year: 2019,
+//     engineCapacity : '4,395',
+//     drive: function () {
+//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
+//     },
+//     info: function () {
+//         console.log(`
+//             model: ${this.model},
+//             manufakturer: ${this.manufakturer},
+//             maxSpeed: ${this.maxSpeed},
+//             year: ${this.year},
+//             engineСapacity: ${this.engineCapacity},
+//         `);
+//     },
+//     increaseMaxSpeed : function (newSpeed) {
+//         this.maxSpeed += newSpeed;
 //
+//     },
+//     changeYear : function (newValue) {
+//         this.year = newValue;
+//     },
+//
+// }
+//
+// car.drive();
+// car.info();
+// car.increaseMaxSpeed(50);
+// car.changeYear(2020);
+
+
 // ==============================================
-//     - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
-// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// - Створити функцію конструктор яка дозволяє створювати об'єкти car,
+// з властивостями модель, виробник, рік випуску,
+// максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль "їдемо зі швидкістю
+//    {максимальна швидкість} на годину"
 // -- info () - яка виводить всю інформацію про автомобіль
-// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення
+//    максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
-// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// -- addDriver (driver) - приймає об'єкт який "водій"
+//    з довільним набором полів, і доавляет його в поточний об'єкт car
 // ==============================================
 //
 // ==============================================
